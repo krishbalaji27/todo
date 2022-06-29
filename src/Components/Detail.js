@@ -1,9 +1,14 @@
 import React from "react";
 
-const Detail=()=>
+const Detail=(props)=>
 {
     return (
-        <p> hello floks</p>
+        <div>
+            <p>{props.item.header}</p>
+            <p>{props.item.catagory}</p>
+            <p>{props.item.deadline}</p>
+        </div>
+        
     )
 }
 export default Detail;
