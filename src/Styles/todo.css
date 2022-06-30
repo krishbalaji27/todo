@@ -1,9 +1,23 @@
 .header {
     background-color: rgb(235, 240, 240);
     height: 50px;
-    font-size: medium;
+    font-size: large;
     color: crimson;
     text-align: center;
+}
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+table, td,th{
+    border: 1px solid;
 
-
+    border-collapse: collapse;
+}
+.tablecontent{
+    font-size: medium;
+    color: rgb(53, 6, 85);
 }
