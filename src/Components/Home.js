@@ -2,10 +2,10 @@ import React from "react";
 
 const Home=(props)=>
 {
-    const clickHandler=(item)=>
+    const clickHandler=(item1)=>
     {
       //  window.location.href='http://localhost:3000/detail'
-        props.parent(item)
+        props.parent(item1)
     }
     return (
         <div>
