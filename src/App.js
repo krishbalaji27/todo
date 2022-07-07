@@ -58,11 +58,24 @@ function App() {
       }
       setA([...temp])
   }
+  const updateValues=(header1,catagory1,deadline1)=>
+  {
+    let a1=a;
+    const maxKey=Math.max(...a.map(e=>e.key))
+    let b={key:maxKey+1,header:header1,catagory:catagory1,deadline:deadline1}
+    setA([...a1,b])
+  }
+  const deleteData=()=>
+  {
+    let a1=a;
+    let b1=a1.filter(e=>e.key!=count.key)
+    setA([...b1])
+  }
   return (
     <div>
     <Todo />
     <Switch>
-    <Route exact path="/"><Home parent={parent} a={a}></Home><Detail item={count} data={dataChange}>
+    <Route exact path="/"><Home parent={parent} a={a} update={updateValues}></Home><Detail item={count} data={dataChange} delete={deleteData}>
     </Detail></Route>
     <Route path="/detail"><Detail item={count} ></Detail></Route>
     </Switch>

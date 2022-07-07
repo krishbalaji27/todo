@@ -10,12 +10,17 @@ const Detail=(props)=>
     {
         props.data(item2,key1);
     }
+    const deleteData=()=>
+    {
+        props.delete();
+    }
     if(props.item!= null)
     {
         console.log(count,props.item.header)
     return (
         <div>
             <button onClick={e=>set(true)}>Edit</button>
+            <button onClick={deleteData}>delete</button>
             <br />
             {isEditMode==true?<div><input type="text" onChange={e=>set1(e.target.value)} value={count}></input>
             <button onClick={()=>clickHandle(count,props.item.key)}>Save</button></div>:<p>{props.item.header}</p>}
